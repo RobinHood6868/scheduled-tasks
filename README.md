@@ -10,24 +10,39 @@ This template runs your Python script automatically using GitHub Actions.
 
 ### Step 1: Create Your Own Copy
 
-1. Click the green **"Use this template"** button at the top of this page
-2. Click **"Create a new repository"**
-3. Give it a name and click **"Create repository"**
+**<img width="1529" height="392" alt="image" src="https://github.com/user-attachments/assets/ad18c370-5d54-4cf0-aebf-4826c3928281" />
+**
+
+- Click the **"fork"** button at the top of this page
 
 You now have your own copy to edit!
 
+### Step 2: Enable the Github Action Workflows
+
+The workflows I created for you will be disabled automatically on your copy. You have to enable them. 
+
+- Click the green button **"I understand my workflows etc etc"**
+ 
+<img width="834" height="349" alt="image" src="https://github.com/user-attachments/assets/296570ac-3800-40d6-9585-d501538cfc8c" />
+
+Obviously one should always (!) check before running random stuff on the internet ;) 
+And of course, once checked, the workflows need to be enabled:
+
+<img width="1547" height="895" alt="image" src="https://github.com/user-attachments/assets/d7fbd3c7-0215-44f8-bba7-8c04c3447b5a" />
+
+
 ---
 
-### Step 2: Add Your Code
+### Step 3: Add Your Code
 
-#### 2a. Copy your Python files
+#### 3a. Copy your Python files
 
 Upload or copy-paste your Python code into `main.py`
 
 If you have other files your script needs (like `.csv` files or `.txt` templates),
 add those to the repository too.
 
-#### 2b. Make these two small changes to your code:
+#### 3b. Make these two small changes to your code:
 
 **Change 1:** Add this import at the top of your file:
 
@@ -47,7 +62,7 @@ MY_EMAIL = os.environ.get("MY_EMAIL")
 MY_PASSWORD = os.environ.get("MY_PASSWORD")
 ```
 
-#### 2c. Add your dependencies
+#### 3c. Add your dependencies
 
 Open `requirements.txt` and list any packages your script needs:
 
@@ -59,7 +74,7 @@ requests
 
 ---
 
-### Step 3: Add Your Secrets
+### Step 4: Add Your Secrets
 
 **Never put passwords or API keys directly in your code!**
 
@@ -82,7 +97,7 @@ GitHub Secrets keeps them safe and hidden.
 
 ---
 
-### Step 4: Set Your Schedule
+### Step 5: Set Your Schedule
 
 Edit the file `.github/workflows/scheduled.yml`
 
@@ -113,7 +128,7 @@ Change the numbers to set your schedule:
 
 ---
 
-### Step 5: Test Your Setup
+### Step 6: Test Your Setup
 
 1. Go to the **Actions** tab in your repository
 2. Click **"Test Setup"** in the left sidebar
@@ -126,7 +141,8 @@ This checks that:
 
 If everything passes, you're ready to go!
 
-### Step 6: Run Your Script
+
+### Step 7: Run Your Script
 
 Once the test passes, try running your actual script:
 
@@ -135,6 +151,11 @@ Once the test passes, try running your actual script:
 3. Click **"Run workflow"** → **"Run workflow"**
 
 Watch it run! Click on the job to see the output.
+
+- Pro tip: it is useful to fail a run so that you can see what happens. There is no Console as such, so it can be confusing when a problem occurs. One common issue I've seen in the Q&A, for example, is forgetting to put the SMTP port number in the connection. 
+
+<img width="1509" height="1096" alt="image" src="https://github.com/user-attachments/assets/3f5e7fea-e1a5-4f90-afd6-8a695af7f529" />
+
 
 ---
 
