@@ -9,7 +9,7 @@ import smtplib
 import pandas as pd
 import datetime as dt
 from random import randint
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
 
@@ -45,9 +45,11 @@ print(birthdays_people)
 
 # 4. Mail people
 if len(birthdays_people) != 0:
-    load_dotenv()
-    EMAIL = os.getenv("EMAIL")
-    PASSWORD = os.getenv("PASSWORD")
+    # load_dotenv()
+    # EMAIL = os.getenv("EMAIL")
+    # PASSWORD = os.getenv("PASSWORD")
+    EMAIL = os.environ.get("EMAIL")
+    PASSWORD = os.environ.get("PASSWORD")
 
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
