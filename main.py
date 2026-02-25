@@ -46,10 +46,10 @@ print(birthdays_people)
 # 4. Mail people
 if len(birthdays_people) != 0:
     # load_dotenv()
-    # EMAIL = os.getenv("MY_EMAIL")
-    # PASSWORD = os.getenv("MY_PASSWORD")
-    EMAIL = os.environ.get("EMAIL")
-    PASSWORD = os.environ.get("PASSWORD")
+    # EMAIL = os.getenv("EMAIL")
+    # PASSWORD = os.getenv("PASSWORD")
+    EMAIL = os.environ.get("MY_EMAIL")
+    PASSWORD = os.environ.get("MY_PASSWORD")
 
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
