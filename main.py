@@ -46,8 +46,8 @@ print(birthdays_people)
 # 4. Mail people
 if len(birthdays_people) != 0:
     # load_dotenv()
-    # EMAIL = os.getenv("EMAIL")
-    # PASSWORD = os.getenv("PASSWORD")
+    # EMAIL = os.getenv("MY_EMAIL")
+    # PASSWORD = os.getenv("MY_PASSWORD")
     EMAIL = os.environ.get("EMAIL")
     PASSWORD = os.environ.get("PASSWORD")
 
